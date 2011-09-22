@@ -1,0 +1,33 @@
+Source: fcitx-cloudpinyin
+Section: utils
+Priority: optional
+Maintainer: Aron Xu <aron@debian.org>
+Build-Depends: debhelper (>= 8), cmake, fcitx-libs-dev, libcurl4-gnutls-dev,
+  intltool
+Standards-Version: 3.9.2
+Homepage: http://code.google.com/p/fcitx
+Vcs-Git: git://git.debian.org/pkg-ime/fcitx-cloudpinyin.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ime/fcitx-cloudpinyin.git
+
+Package: fcitx-module-cloudpinyin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, fcitx-modules
+Recommends: fcitx (>=1:4.1.1)
+Description: Free Chinese Input Toy of X - cloudpinyin module
+ Fcitx is the Free Chinese Input Toy of X, which was initially designed
+ for Chinese users, and used XIM protocol. Now it has already evolved
+ into a highly modularized, feature rich input method framework for
+ Unix-like platforms supporting a considerable amount of frontends,
+ backends and modules.
+ .
+ It is an ideal choice for the vast majority. Many of its features make
+ users of Unix-like platforms have a fully modern input experience for
+ the first time. It has also greatly lower the threshold for developers,
+ making the development of extended funtions much easier than ever before.
+ .
+ This package provides the cloudpinyin module, which supports to make
+ use of Pinyin APIs on the Internet and display the first result as the
+ second input candidate.
+ .
+ Please be aware by installing and enabling this module, Fcitx will send
+ your input data to the Internet to retrive result candidates.

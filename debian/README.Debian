@@ -1,0 +1,16 @@
+fcitx-cloudpinyin for Debian
+----------------------------
+
+This module can take the advantage of using Pinyin APIs on the
+Internet to enhance the experience of any Pinyin input method in
+Fcitx. It will display the first result from the Internet API as
+second candidate (you can change the order of cloudpinyin candidate)
+in Fcitx.
+
+Please be aware by installing and enabling this module, Fcitx will
+send your input data to the Internet to retrive the candidate
+result. You should disable it when you are working on sensitive
+information like confidential documents and your private
+information, etc.
+
+ -- Aron Xu <aron@debian.org>  Thu, 22 Sep 2011 10:38:18 +0800
