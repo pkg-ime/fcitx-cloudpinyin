@@ -1,3 +1,10 @@
+fcitx-cloudpinyin (0.1.2-2) unstable; urgency=low
+
+  * Upstream patch: when input a long sentence, 
+    fcitx close: Get signal No.: 6.
+
+ -- YunQiang Su <wzssyqa@gmail.com>  Tue, 27 Dec 2011 15:41:44 +0800
+
 fcitx-cloudpinyin (0.1.2-1) unstable; urgency=low
 
   * New upstream release.
