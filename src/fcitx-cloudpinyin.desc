@@ -1,0 +1,26 @@
+[CloudPinyin/CandidateOrder]
+Type=Integer
+DefaultValue=2
+Description=Cloud Pinyin Candidate Word Order
+
+[CloudPinyin/MinimumPinyinLength]
+Type=Integer
+DefaultValue=10
+Description=Minimum Length of Pinyin To Trigger Cloud Pinyin
+
+[CloudPinyin/DontShowSource]
+Type=Boolean
+DefaultValue=True
+Description=Don't Show the 'via cloud' hint
+
+[CloudPinyin/Source]
+Type=Enum
+DefaultValue=Sogou
+Description=Cloud Pinyin Source
+EnumCount=3
+Enum0=Sogou
+Enum1=QQ
+Enum2=Google
+
+[DescriptionFile]
+LocaleDomain=fcitx-cloudpinyin
