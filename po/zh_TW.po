@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Weng Xuetian <wengxt@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-27 22:05+0800\n"
-"PO-Revision-Date: 2011-11-16 06:56+0000\n"
-"Last-Translator: csslayer <wengxt@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2011-11-16 06:52+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.net/projects/p/fcitx/"
+"team/zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,48 +20,48 @@ msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/build/po/../..//src/cloudpinyin.c:487
 msgid " (via cloud)"
-msgstr " (来自云)"
+msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/build/po/tmp/fcitx-cloudpinyin.conf.in.h:1
 msgid "Add Cloud Pinyin Support to Pinyin Input Method"
-msgstr "为拼音输入法加入云拼音支持"
+msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/build/po/tmp/fcitx-cloudpinyin.conf.in.h:2
 msgid "Cloud Pinyin"
-msgstr "云拼音"
+msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/src/fcitx-cloudpinyin.desc:4
 msgid "Cloud Pinyin Candidate Word Order"
-msgstr "云拼音候选词顺序"
+msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/src/fcitx-cloudpinyin.desc:24
 msgid "Cloud Pinyin Source"
-msgstr "云拼音来源"
+msgstr ""
 
 # unknown
 msgid "CloudPinyin"
-msgstr "云拼音"
+msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/src/fcitx-cloudpinyin.desc:19
 msgid "Don't Show the 'via cloud' hint"
-msgstr "不显示‘来自云’提示"
+msgstr ""
 
 #: unknown
 msgid "Google"
-msgstr "Google"
+msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/src/fcitx-cloudpinyin.desc:9
 msgid "Minimum Length of Pinyin To Trigger Cloud Pinyin"
-msgstr "最小触发云拼音的拼音长度"
+msgstr ""
 
 #: /home/saber/Develop/fcitx-cloudpinyin/src/fcitx-cloudpinyin.desc:14
 msgid "Only use origin Pinyin to query the result"
-msgstr "只使用原始拼音查询结果"
+msgstr ""
 
 #: unknown
 msgid "QQ"
-msgstr "QQ"
+msgstr ""
 
 #: unknown
 msgid "Sogou"
-msgstr "搜狗"
+msgstr ""

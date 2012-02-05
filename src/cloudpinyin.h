@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011~2011 by CSSlayer                                   *
+ *   Copyright (C) 2011~2012 by CSSlayer                                   *
  *   wengxt@gmail.com                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -15,7 +15,7 @@
  *   You should have received a copy of the GNU General Public License     *
  *   along with this program; if not, write to the                         *
  *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ *   51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.              *
  ***************************************************************************/
 
 #ifndef FCITX_CLOUDPINYIN_H
@@ -28,6 +28,7 @@
 #define QQ_KEY_LENGTH 32
 #define MAX_CACHE_ENTRY 2048
 #define MAX_ERROR 10
+#define MAX_HANDLE 10l
 
 #define _(x) dgettext("fcitx-cloudpinyin", (x))
 
@@ -46,6 +47,12 @@ typedef enum _CloudPinyinRequestType
     RequestKey,
     RequestPinyin
 } CloudPinyinRequestType ;
+
+typedef struct _CurlFreeListItem
+{
+    boolean used;
+    CURL* curl;
+} CurlFreeListItem;
 
 typedef struct _CurlQueue
 {
@@ -69,7 +76,7 @@ typedef struct _CloudPinyinCache
 
 typedef struct _FcitxCloudPinyinConfig
 {
-    GenericConfig config;
+    FcitxGenericConfig config;
     int iCandidateOrder;
     int iMinimumPinyinLength;
     boolean bDontShowSource;
@@ -80,13 +87,24 @@ typedef struct _FcitxCloudPinyin
 {
     struct _FcitxInstance* owner;
     FcitxCloudPinyinConfig config;
-    CURLM* curlm;
-    CurlQueue* queue;
+    CurlQueue* pendingQueue;
+    CurlQueue* finishQueue;
+
+    pthread_mutex_t pendingQueueLock;
+    pthread_mutex_t finishQueueLock;
+
+    int pipeNotify;
+    int pipeRecv;
     int errorcount;
     char key[SOGOU_KEY_LENGTH + 1];
     boolean initialized;
     CloudPinyinCache* cache;
     boolean isrequestkey;
+    struct _FcitxFetchThread* fetch;
+    
+    CurlFreeListItem freeList[MAX_HANDLE];
+    
+    pthread_t pid;
 } FcitxCloudPinyin;
 
 CONFIG_BINDING_DECLARE(FcitxCloudPinyinConfig);
