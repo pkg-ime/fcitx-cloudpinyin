@@ -1,3 +1,9 @@
+fcitx-cloudpinyin (0.2.0-1) unstable; urgency=low
+
+  * New upstream release, can only support fcitx 4.2+.
+
+ -- YunQiang Su <wzssyqa@gmail.com>  Sun, 05 Feb 2012 20:18:58 +0800
+
 fcitx-cloudpinyin (0.1.2-2) unstable; urgency=low
 
   * Upstream patch: when input a long sentence, 
