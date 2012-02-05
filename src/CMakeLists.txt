@@ -1,4 +1,5 @@
 include_directories(
+    ${PROJECT_BINARY_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CURL_INCLUDE_DIRS}
     ${FCITX4_FCITX_INCLUDE_DIRS}
@@ -14,6 +15,7 @@ link_directories(
 set(FCITX_CLOUDPINYIN_SRCS
     cloudpinyin.c
     cloudpinyinconifg.c
+    fetch.c
 )
 
 fcitx_add_addon(fcitx-cloudpinyin ${FCITX_CLOUDPINYIN_SRCS})

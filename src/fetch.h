@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011~2012 by CSSlayer                                   *
+ *   Copyright (C) 2012~2012 by CSSlayer                                   *
  *   wengxt@gmail.com                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,14 +18,25 @@
  *   51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.              *
  ***************************************************************************/
 
-#include "cloudpinyin.h"
+#ifndef FCITX_FETCH_H
+#define FCITX_FETCH_H
 
-/* USE fcitx provided macro to bind config and variable */
-CONFIG_BINDING_BEGIN(FcitxCloudPinyinConfig);
-CONFIG_BINDING_REGISTER("CloudPinyin", "CandidateOrder", iCandidateOrder);
-CONFIG_BINDING_REGISTER("CloudPinyin", "MinimumPinyinLength", iMinimumPinyinLength);
-CONFIG_BINDING_REGISTER("CloudPinyin", "DontShowSource", bDontShowSource);
-CONFIG_BINDING_REGISTER("CloudPinyin", "Source", source);
-CONFIG_BINDING_END();
+typedef struct _FcitxFetchThread {
+    CURLM* curlm;
+    int pipeRecv;
+    int pipeNotify;
+    fd_set rfds;
+    fd_set wfds;
+    fd_set efds;
+    int maxfd;
+    CurlQueue* queue;
 
-// kate: indent-mode cstyle; space-indent on; indent-width 0;
+    pthread_mutex_t* pendingQueueLock;
+    pthread_mutex_t* finishQueueLock;
+
+    FcitxCloudPinyin* owner;
+} FcitxFetchThread;
+
+void* FetchThread(void* arg);
+
+#endif
