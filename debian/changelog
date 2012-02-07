@@ -1,3 +1,9 @@
+fcitx-cloudpinyin (0.2.0-2) unstable; urgency=low
+
+  * debian/control: fix team mailing list. 
+
+ -- YunQiang Su <wzssyqa@gmail.com>  Wed, 08 Feb 2012 02:17:50 +0800
+
 fcitx-cloudpinyin (0.2.0-1) unstable; urgency=low
 
   * New upstream release, can only support fcitx 4.2+.
